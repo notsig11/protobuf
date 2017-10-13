@@ -172,6 +172,17 @@ autoconf documentation:
 
   Also, you will need to use GNU `make` (`gmake`) instead of AIX `make`.
 
+**Note for QNX users**
+
+	Compile using the qcc compiler as follows:
+	
+		./configure CXX=$QNX_HOST/usr/bin/QCC CC=$QNX_HOST/usr/bin/qcc LD=$QNX_HOST/usr/bin/QCC \
+						CXXFLAGS="-L$QNX_TARGET/<arch>/lib -V<arch>" \
+						CFLAGS="-V<arch>" \
+						LDFLAGS="-V<arch>" --host=<arch>-unknown-nto-qnx7.0.0" \
+						--with-protoc=/your/host/protoc 
+
+
 C++ Installation - Windows
 --------------------------
 
